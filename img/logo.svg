@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="14" fill="#1d1d1f"/>
+
+  <text x="32" y="40"
+        font-size="26"
+        font-weight="600"
+        font-style="italic"
+        font-family="Inter, -apple-system, BlinkMacSystemFont"
+        fill="#ffffff"
+        text-anchor="middle">
+    SC
+  </text>
+
+  <line x1="23" y1="44" x2="41" y2="44"
+        stroke="#cfd8dc"
+        stroke-width="0.6"
+        stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,363 @@
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", Inter, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #1d1d1f;
+  line-height: 1.5;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --text-main: #1d1d1f;
+  --text-muted: #6e6e73;
+  --bg-light: #f5f5f7;
+  --accent: #0071e3;
+  --border-light: #d2d2d7;
+  --radius: 14px;
+  --transition: 0.35s ease;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.container {
+  width: 99%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/* =========================
+   NAVIGATION (Apple style)
+========================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+.nav-logo {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: var(--text-main);
+  opacity: 0.85;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* =========================
+   HERO (Apple-style)
+========================= */
+.hero-content {
+  background-color: var(--bg-light);
+}
+
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1.2rem auto 2rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  display: inline-block;
+  font-size: 0.95rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 6rem 0;
+  background-color: var(--bg-light);
+  margin-top: 1rem;
+}
+
+section.alt {
+  background: var(--bg-light);
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 3rem;
+}
+
+/* =========================
+   VEHICLE CARDS (Apple grid)
+========================= */
+.vehicles-section .container .section-subtitle {
+  padding: 5px;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 5rem;
+  padding-top: 10px;
+}
+
+.vehicle-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vehicle-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.vehicle-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.vehicle-info h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.vehicle-placeholder {
+  width: 168px;
+  margin: auto;
+}
+
+.vehicle-placeholder-large {
+  padding: 20px;
+}
+
+.vehicle-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0.8rem 0 1.5rem;
+}
+
+.btn-secondary {
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   ABOUT / CTA
+========================= */
+.about p,
+.cta p {
+  max-width: 700px;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* =========================
+   CONTACT FORM (Apple clean)
+========================= */
+.contact-details {
+  gap: 2rem;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin: 2px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.contact-item {
+  margin: 5px;
+  text-align: center;
+}
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.contact-icon {
+  padding-right: 10px;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.consent {
+  width: auto !important;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+}
+
+.contact-header .page-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-info h2 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-features {
+  display: flex;
+  gap: 4rem;
+  margin-top: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-title {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.feature-title h4 {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: var(--bg-light);
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
