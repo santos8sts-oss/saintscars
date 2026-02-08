@@ -90,6 +90,12 @@ nav a:hover {
   opacity: 1;
 }
 
+nav a.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 /* =========================
    HERO (Apple-style)
 ========================= */

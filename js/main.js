@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navToggle && navMenu) {
           navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
         }
+        // Set active nav link based on current page
+        setActiveNavLink();
       } else {
         console.warn('No <nav> found in header.html or placeholder missing');
       }
@@ -44,3 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('Error loading footer:', err));
 });
+
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  if (currentPage === 'index.html' || currentPage === '') {
+    // Use Intersection Observer for section-based active link on index page
+    const sections = document.querySelectorAll('section[id]');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          
+          const sectionId = entry.target.id;
+          const activeLink = document.querySelector(`a[href="index.html#${sectionId}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active');
+          }
+        }
+      });
+    }, observerOptions);
+    
+    sections.forEach(section => observer.observe(section));
+  } else if (currentPage === 'contact.html') {
+    navLinks.forEach(link => link.classList.remove('active'));
+    const contactLink = document.querySelector('a[href="contact.html"]');
+    if (contactLink) {
+      contactLink.classList.add('active');
+    }
+  }
+}
