@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "saints-cars:build:production"
+              "buildTarget": "saints-cars:build:production"
             },
             "development": {
-              "browserTarget": "saints-cars:build:development"
+              "buildTarget": "saints-cars:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "saints-cars:build"
+            "buildTarget": "saints-cars:build"
           }
         },
         "test": {
