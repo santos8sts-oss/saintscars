@@ -1,13 +1,15 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { CommonModule } from 'node_modules/@angular/common/types/_common_module-chunk';
 import { Vehicle } from 'src/app/models/vehicle-detail-models';
 import { VehicleDetailService } from 'src/app/services/vehicle-detail.service';
 
 @Component({
-    selector: 'app-vehicle-detail',
-    templateUrl: './vehicle-detail.component.html',
-    styleUrls: ['./vehicle-detail.component.scss'],
-    standalone: false
+  selector: 'app-vehicle-detail',
+  templateUrl: './vehicle-detail.component.html',
+  styleUrls: ['./vehicle-detail.component.scss'],
+  standalone: true,
+  imports: [RouterOutlet, CommonModule],
 })
 export class VehicleDetailComponent implements OnInit {
 
