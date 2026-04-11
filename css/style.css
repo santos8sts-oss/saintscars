@@ -248,6 +248,14 @@ section h2 {
 .contact-item {
   margin: 5px;
   text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 1.5rem;
 }
 
 .contact-title {
@@ -256,6 +264,12 @@ section h2 {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  justify-content: center;
+}
+
+.contact-text {
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -357,13 +371,4 @@ footer {
 
 footer ul {
   list-style: none;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
 }
