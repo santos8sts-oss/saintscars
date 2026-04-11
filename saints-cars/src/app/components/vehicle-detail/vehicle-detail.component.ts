@@ -4,9 +4,10 @@ import { Vehicle } from 'src/app/models/vehicle-detail-models';
 import { VehicleDetailService } from 'src/app/services/vehicle-detail.service';
 
 @Component({
-  selector: 'app-vehicle-detail',
-  templateUrl: './vehicle-detail.component.html',
-  styleUrls: ['./vehicle-detail.component.scss']
+    selector: 'app-vehicle-detail',
+    templateUrl: './vehicle-detail.component.html',
+    styleUrls: ['./vehicle-detail.component.scss'],
+    standalone: false
 })
 export class VehicleDetailComponent implements OnInit {
 
