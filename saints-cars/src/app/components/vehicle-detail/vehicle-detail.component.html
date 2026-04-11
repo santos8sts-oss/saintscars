@@ -1,111 +1,113 @@
 <!-- Vehicle Detail Hero -->
 <section class="vehicle-detail-hero">
-    <div class="container">
-        <a href="index.html#vehicules" class="back-link">← Retour aux véhicules</a>
-        <div class="vehicle-detail-header">
-            <div class="vehicle-detail-info">
-                <h1 class="vehicle-detail-title">{{ vehicle?.name }}</h1>
-                <p class="vehicle-detail-subtitle">{{ vehicle?.subtitle }}</p>
-                <div class="vehicle-detail-badges">
-                    <span class="badge-large">{{ vehicle?.details?.year }}</span>
-                    <span class="badge-large">{{ vehicle?.details?.motorType }}</span>
-                    <span class="badge-large">{{ vehicle?.details?.fuelType }}</span>
-                </div>
-            </div>
+  <div class="container">
+    <a href="index.html#vehicules" class="back-link">← Retour aux véhicules</a>
+    <div class="vehicle-detail-header">
+      <div class="vehicle-detail-info">
+        <h1 class="vehicle-detail-title">{{ vehicle?.name }}</h1>
+        <p class="vehicle-detail-subtitle">{{ vehicle?.subtitle }}</p>
+        <div class="vehicle-detail-badges">
+          <span class="badge-large">{{ vehicle?.details?.year }}</span>
+          <span class="badge-large">{{ vehicle?.details?.motorType }}</span>
+          <span class="badge-large">{{ vehicle?.details?.fuelType }}</span>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Vehicle Images -->
 <section class="vehicle-images">
-    <div class="container">
-        <div class="image-gallery">
-            <div class="main-image">
-                <div class="vehicle-placeholder-large">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <path
-                            d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10l-1.5-5H7v16m12 0h-2M3 17h2m0 0h8m-8 0v-6l4-4m4 10V7"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <p>{{ vehicle?.subtitle }}</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="image-gallery">
+      <div class="main-image">
+        <div class="vehicle-placeholder-large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <path
+              d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10l-1.5-5H7v16m12 0h-2M3 17h2m0 0h8m-8 0v-6l4-4m4 10V7"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <p>{{ vehicle?.subtitle }}</p>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Specifications -->
 <section class="vehicle-specs">
-    <div class="container">
-        <h2 class="section-title">Caractéristiques techniques</h2>
+  <div class="container">
+    <h2 class="section-title">Caractéristiques techniques</h2>
 
-        <div class="specs-grid">
-            <div class="spec-card">
-                <div class="spec-icon">🚗</div>
-                <h3>{{ vehicle?.details?.make }} {{ vehicle?.details?.model }}</h3>
-                <p>{{ vehicle?.subtitle }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">📅</div>
-                <h3>Année</h3>
-                <p>{{ vehicle?.details?.year }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">⚡</div>
-                <h3>Motorisation</h3>
-                <p>{{ vehicle?.details?.motorType }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">⛽</div>
-                <h3>Carburant</h3>
-                <p>{{ vehicle?.details?.fuelType }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">⚙️</div>
-                <h3>Boîte de vitesses</h3>
-                <p>{{ vehicle?.details?.gearboxType }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">🎨</div>
-                <h3>Finition</h3>
-                <p>{{ vehicle?.details?.finishType }}</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">🪑</div>
-                <h3>Nombre de places</h3>
-                <p>{{ vehicle?.details?.numberOfSeats }} places</p>
-            </div>
-            <div class="spec-card">
-                <div class="spec-icon">🚪</div>
-                <h3>Nombre de portes</h3>
-                <p>{{ vehicle?.details?.numberOfDoors }} portes</p>
-            </div>
-        </div>
-
-        <div class="features-section">
-            <h3>Équipements & Options</h3>
-            <div class="features-grid" *ngFor="let feature of vehicle?.details?.equipments">
-                <div class="feature-item">
-                    <span class="feature-check">✓</span>
-                    <span>{{ feature }}</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="vehicle-description">
-            <h3>Description</h3>
-            <p>{{ vehicle?.details?.description }}</p>
-        </div>
+    <div class="specs-grid">
+      <div class="spec-card">
+        <div class="spec-icon">🚗</div>
+        <h3>{{ vehicle?.details?.make }} {{ vehicle?.details?.model }}</h3>
+        <p>{{ vehicle?.subtitle }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">📅</div>
+        <h3>Année</h3>
+        <p>{{ vehicle?.details?.year }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">⚡</div>
+        <h3>Motorisation</h3>
+        <p>{{ vehicle?.details?.motorType }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">⛽</div>
+        <h3>Carburant</h3>
+        <p>{{ vehicle?.details?.fuelType }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">⚙️</div>
+        <h3>Boîte de vitesses</h3>
+        <p>{{ vehicle?.details?.gearboxType }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🎨</div>
+        <h3>Finition</h3>
+        <p>{{ vehicle?.details?.finishType }}</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🪑</div>
+        <h3>Nombre de places</h3>
+        <p>{{ vehicle?.details?.numberOfSeats }} places</p>
+      </div>
+      <div class="spec-card">
+        <div class="spec-icon">🚪</div>
+        <h3>Nombre de portes</h3>
+        <p>{{ vehicle?.details?.numberOfDoors }} portes</p>
+      </div>
     </div>
+
+    <div class="features-section">
+      <h3>Équipements & Options</h3>
+      @for (feature of vehicle?.details?.equipments; track feature) {
+        <div class="features-grid">
+          <div class="feature-item">
+            <span class="feature-check">✓</span>
+            <span>{{ feature }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="vehicle-description">
+      <h3>Description</h3>
+      <p>{{ vehicle?.details?.description }}</p>
+    </div>
+  </div>
 </section>
 
 <!-- CTA -->
 <section class="vehicle-cta">
-    <div class="container">
-        <div class="cta-box">
-            <h2>Intéressé par ce véhicule ?</h2>
-            <p>Contactez-nous pour obtenir plus d'informations, planifier un essai ou discuter des modalités d'achat</p>
-            <a href="contact.html?vehicle={{ vehicle?.id }}" class="btn-primary">Demander des informations</a>
-        </div>
+  <div class="container">
+    <div class="cta-box">
+      <h2>Intéressé par ce véhicule ?</h2>
+      <p>Contactez-nous pour obtenir plus d'informations, planifier un essai ou discuter des modalités d'achat</p>
+      <a href="contact.html?vehicle={{ vehicle?.id }}" class="btn-primary">Demander des informations</a>
     </div>
+  </div>
 </section>
