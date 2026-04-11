@@ -1,0 +1,120 @@
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <h1 class="page-title">Contactez-nous</h1>
+                <p class="page-subtitle">Notre équipe est à votre écoute pour répondre à toutes vos questions</p>
+            </div>
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Informations de contact</h2>
+                <p>N'hésitez pas à nous contacter par téléphone, email ou en remplissant le formulaire ci-contre.
+                    Nous vous répondrons dans les plus brefs délais.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-title">
+                            <div class="contact-icon">📧</div>
+                            <span>Email</span>
+                        </div>
+                        <div class="contact-text">
+                            <a href="mailto:contact@saintscars.fr">contact@saintscars.fr</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-title">
+                            <div class="contact-icon">📞</div>
+                            <span>Téléphone</span>
+                        </div>
+                        <div class="contact-text">
+                            <a href="tel:+33100000000">+33 (0)7 49 58 67 96</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-title">
+                            <div class="contact-icon">📍</div>
+                            <span>Adresse</span>
+                        </div>
+                        <div class="contact-text">
+                            <p>France</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-title">
+                            <div class="contact-icon">🕐</div>
+                            <span>Horaires d'ouverture</span>
+                        </div>
+                        <div class="contact-text">
+                            <p>Lundi - Vendredi : 9h00 - 18h00<br>
+                                Samedi : 9h00 - 17h00<br>
+                                Dimanche : Fermé</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Envoyez-nous un message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="+33 6 XX XX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicule">Véhicule concerné</label>
+                        <select id="vehicule" name="vehicule">
+                            <option value="">Sélectionnez un véhicule</option>
+                            <option value="ford-ecosport">Ford EcoSport 1.0 EcoBoost 125ch ST-Line (2019)</option>
+                            <option value="hyundai-ioniq">Hyundai Ioniq 141ch Executive Hybride (2020)</option>
+                            <option value="autre">Demande générale</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sujet">Sujet *</label>
+                        <select id="sujet" name="sujet" required>
+                            <option value="">Choisissez un sujet</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="essai">Demande d'essai</option>
+                            <option value="achat">Modalités d'achat</option>
+                            <option value="financement">Financement</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required
+                            placeholder="Décrivez votre demande..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="consent" id="consent" name="consent" required>
+                            <span>J'accepte que mes données soient utilisées pour me recontacter *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-full">Envoyer le message</button>
+
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
